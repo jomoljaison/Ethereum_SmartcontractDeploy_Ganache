@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <div class="form-modalID">
+      <div class="form-toggle">
+        <form action="createtoken" method="post">
+          <br>
+          <br>
+          <center>
+          <label>Token type:</label>
+          <select name="tokentype" id="tokentype">
+            <option value="ERC20">ERC20</option>
+            <option value="ERC721">ERC721</option>
+            <option value="ERC1155">ERC1155</option>
+          </select>
+          <br>    <br>
+           <!-- tokentype, tokenname, tokensymbol, tokendecimal, tokensupply, owneraddress -->
+           <label>Token Name:&nbsp;</label><input type="text" name="tokenname">    <br>    <br>
+           <label>Token Symbol:&nbsp;</label><input type="text" name="tokensymbol">    <br>    <br>
+           <label>Token Decimal:&nbsp;</label><input type="number" name="tokendecimal">    <br>    <br>
+           <label>Token Supply:&nbsp;</label><input type="number" name="tokensupply">    <br>    <br>
+           <label>Owner Address:&nbsp;</label><input type="text" name="owneraddress">    <br>    <br>
+           
+           <br>
+           <input type="submit" value="Generate Code"><br>
+
+
+
+
+
+        
+          </center>
+        </form>
+
+
+      </div>
+</div>
+
+  </body>
+  <script>
+
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+    } else {
+        // set the provider you want from Web3.providers
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+</script>
+</html>
